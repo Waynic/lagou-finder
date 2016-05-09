@@ -22,7 +22,7 @@ def geo_worker():
                     break
             continue
         address = LagouAPI.get_location_by_pos_id(jd['positionId'])
-        gis = BaiduMapAPI.search('上海', address)
+        gis = BaiduMapAPI.search('北京', address)
         job = Job(str(uuid.uuid1()))
         job.company_name = jd['companyName']
         job.location = address
@@ -50,13 +50,13 @@ geo_thread.start()
 def main():
     global done
     try:
-        for jd in LagouAPI.search('PHP', city='上海', gx='全职', yx='21k-50k'):
+        for jd in LagouAPI.search('Python', city='北京', gx='全职', yx='21k-50k'):
             jq.put(jd)
         with lock:
             done = True
         geo_thread.join()
     except Exception as e:
-        print(e.with_traceback())
+        print(e)
 
 
 if __name__ == '__main__':
