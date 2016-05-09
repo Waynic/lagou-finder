@@ -14,6 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
     <link href="../static/styles/common.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -24,6 +25,13 @@
       <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
       <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
+      <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cOkVK50e1ShgG2r9sUFPbKgX"></script>
+      <!-- 加载百度地图样式信息窗口 -->
+	  <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+
+	  <!-- 加载城市列表 -->
+	  <script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
   </head>
 
   <body>
@@ -49,17 +57,20 @@
     </nav>
 
     <div class="container">
-
-        <div>主要内容</div>
-
+        <div id="l-map" style="padding-top: 40px"></div>
+        <script type="text/javascript" src="../static/js/index2.js"></script>
     </div><!-- /.container -->
+
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.map"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cOkVK50e1ShgG2r9sUFPbKgX"></script>
-    <script type="text/javascript" src="/static/js/index.js"></script>
+
+
+{#    <script type="text/javascript" src="/static/js/index.js"></script>#}
+
+
+
   </body>
 </html>
