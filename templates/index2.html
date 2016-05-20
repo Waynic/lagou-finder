@@ -16,6 +16,9 @@
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
     <link href="../static/styles/common.css" rel="stylesheet">
+    <style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
 
     <!-- Custom styles for this template -->
 {#    <link href="starter-template.css" rel="stylesheet">#}
@@ -55,22 +58,13 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container">
-        <div id="l-map" style="padding-top: 40px"></div>
-        <script type="text/javascript" src="../static/js/index2.js"></script>
-    </div><!-- /.container -->
-
+    <div id="allmap" style="margin-top: 45px;"></div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-
-{#    <script type="text/javascript" src="/static/js/index.js"></script>#}
-
-
-
   </body>
+  <script type="text/javascript" src="../static/js/index2.js"></script>
 </html>
