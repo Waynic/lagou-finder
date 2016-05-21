@@ -3,7 +3,7 @@
   $(function() {
     var addMarker, map, point, top_left_control, top_left_navigation;
     map = new BMap.Map("allmap");
-    point = new BMap.Point(121.531405, 31.215183);
+    point = new BMap.Point(116.404, 39.915);
     map.centerAndZoom(point, 14);
     top_left_control = new BMap.ScaleControl({
       anchor: BMAP_ANCHOR_TOP_LEFT

@@ -10,7 +10,12 @@ def sa_obj_to_dict(obj):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index2.html')
+
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 
 @app.route('/api/jobs')

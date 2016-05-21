@@ -2,6 +2,8 @@ $ ->
     map = new BMap.Map("allmap")
     point = new BMap.Point(121.531405, 31.215183)
     map.centerAndZoom(point, 14)
+    map.enableScrollWheelZoom(true)
+    map.setCurrentCity("北京")
     top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT})
     map.addControl(top_left_control)
     top_left_navigation = new BMap.NavigationControl()
