@@ -24,9 +24,9 @@ def geo_worker():
         address = LagouAPI.get_location_by_pos_id(jd['positionId'])
         gis = BaiduMapAPI.search('北京', address)
         job = Job(str(uuid.uuid1()))
-        job.company_name = jd['companyName']
+        job.company_name = jd['companyFullName']
         job.location = address
-        job.ctime = jd['createTimeSort']
+        job.ctime = jd['createTime']
         job.salary = jd['salary']
         job.company_size = jd['companySize']
         job.field = jd['industryField']
